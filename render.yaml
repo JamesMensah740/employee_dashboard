@@ -1,15 +1,11 @@
 services:
   - type: web
-    name: employee_dashboard
+    name: employee_dashboard_dash
     env: python
     plan: free
     autoDeploy: true
     buildCommand: pip install -r requirements.txt
-    startCommand: bash start.sh
+    startCommand: gunicorn dash_app:server --bind 0.0.0.0:$PORT --timeout 300
     envVars:
-      - key: STREAMLIT_HOST
-        value: 127.0.0.1
-      - key: STREAMLIT_PORT
-        value: 8501
       - key: PYTHON_VERSION
         value: 3.11.9
