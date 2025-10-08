@@ -26,7 +26,7 @@ hr { margin: .8rem 0; }
 """, unsafe_allow_html=True)
 
 st.markdown("<h2 style='text-align:center;color:#1f77b4;'>Employee Performance & Hierarchy Dashboard</h2>", unsafe_allow_html=True)
-st.caption("Demo built with synthetic data (Faker). Streamlit + Plotly. By James Mensah.")
+st.caption("Demo built with synthetic data. Streamlit + Plotly. By James Mensah.")
 
 # ======================== HELPERS ========================
 def order_months(perf: pd.DataFrame) -> pd.DataFrame:
